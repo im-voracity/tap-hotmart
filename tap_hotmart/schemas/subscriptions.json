@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "subscriber_code": { "type": "string" },
+    "subscription_id": { "type": ["integer", "null"] },
+    "status": { "type": ["string", "null"] },
+    "accession_date": { "type": ["integer", "null"] },
+    "end_accession_date": { "type": ["integer", "null"] },
+    "request_date": { "type": ["integer", "null"] },
+    "date_next_charge": { "type": ["integer", "null"] },
+    "trial": { "type": ["boolean", "null"] },
+    "transaction": { "type": ["string", "null"] },
+    "plan": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "id": { "type": ["integer", "null"] },
+        "recurrency_period": { "type": ["integer", "null"] },
+        "max_charge_cycles": { "type": ["integer", "null"] }
+      }
+    },
+    "product": {
+      "type": ["object", "null"],
+      "properties": {
+        "id": { "type": ["integer", "null"] },
+        "name": { "type": ["string", "null"] },
+        "ucode": { "type": ["string", "null"] }
+      }
+    },
+    "price": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "currency_code": { "type": ["string", "null"] }
+      }
+    },
+    "subscriber": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "email": { "type": ["string", "null"] },
+        "ucode": { "type": ["string", "null"] },
+        "id": { "type": ["integer", "null"] }
+      }
+    }
+  },
+  "required": ["subscriber_code"]
+}

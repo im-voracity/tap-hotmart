@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "product_id": { "type": "integer" },
+    "product": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": ["string", "null"] },
+        "ucode": { "type": ["string", "null"] }
+      },
+      "required": ["id"]
+    },
+    "status": { "type": ["string", "null"] },
+    "format": { "type": ["string", "null"] },
+    "price": {
+      "type": ["object", "null"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "currency_value": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "required": ["product_id", "product"]
+}

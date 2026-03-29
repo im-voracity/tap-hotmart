@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "transaction": { "type": "string" },
+    "approved_date": { "type": ["integer", "null"] },
+    "product": {
+      "type": ["object", "null"],
+      "properties": {
+        "id": { "type": ["integer", "null"] },
+        "name": { "type": ["string", "null"] }
+      }
+    },
+    "buyer": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "email": { "type": ["string", "null"] },
+        "ucode": { "type": ["string", "null"] }
+      }
+    },
+    "producer": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "ucode": { "type": ["string", "null"] }
+      }
+    },
+    "purchase": {
+      "type": ["object", "null"],
+      "properties": {
+        "transaction": { "type": ["string", "null"] },
+        "order_date": { "type": ["integer", "null"] },
+        "approved_date": { "type": ["integer", "null"] },
+        "status": { "type": ["string", "null"] },
+        "recurrency_number": { "type": ["integer", "null"] },
+        "is_subscription": { "type": ["boolean", "null"] },
+        "commission_as": { "type": ["string", "null"] },
+        "price": {
+          "type": ["object", "null"],
+          "properties": {
+            "value": { "type": ["number", "null"] },
+            "currency_code": { "type": ["string", "null"] }
+          }
+        },
+        "payment": {
+          "type": ["object", "null"],
+          "properties": {
+            "method": { "type": ["string", "null"] },
+            "installments_number": { "type": ["integer", "null"] },
+            "type": { "type": ["string", "null"] }
+          }
+        },
+        "tracking": {
+          "type": ["object", "null"],
+          "properties": {
+            "source": { "type": ["string", "null"] },
+            "source_sck": { "type": ["string", "null"] },
+            "external_code": { "type": ["string", "null"] }
+          }
+        },
+        "offer": {
+          "type": ["object", "null"],
+          "properties": {
+            "code": { "type": ["string", "null"] },
+            "payment_mode": { "type": ["string", "null"] }
+          }
+        },
+        "hotmart_fee": {
+          "type": ["object", "null"],
+          "properties": {
+            "total": { "type": ["number", "null"] },
+            "fixed": { "type": ["number", "null"] },
+            "base": { "type": ["number", "null"] },
+            "percentage": { "type": ["number", "null"] },
+            "currency_code": { "type": ["string", "null"] }
+          }
+        },
+        "warranty_expire_date": { "type": ["integer", "null"] }
+      }
+    }
+  },
+  "required": ["transaction"]
+}

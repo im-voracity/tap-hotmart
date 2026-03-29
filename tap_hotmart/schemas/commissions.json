@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "transaction": { "type": "string" },
+    "product": {
+      "type": ["object", "null"],
+      "properties": {
+        "id": { "type": ["integer", "null"] },
+        "name": { "type": ["string", "null"] }
+      }
+    },
+    "exchange_rate_currency_payout": { "type": ["number", "null"] },
+    "commissions": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": { "type": ["string", "null"] },
+          "commission": {
+            "type": ["object", "null"],
+            "properties": {
+              "value": { "type": ["number", "null"] },
+              "currency_value": { "type": ["string", "null"] },
+              "currency_code": { "type": ["string", "null"] }
+            }
+          },
+          "user": {
+            "type": ["object", "null"],
+            "properties": {
+              "name": { "type": ["string", "null"] },
+              "email": { "type": ["string", "null"] },
+              "ucode": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["transaction"]
+}
